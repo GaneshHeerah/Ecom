@@ -16,29 +16,25 @@ import lombok.Setter;
  * @author ghr
  */
 @Entity
-@Table(name = "user")
+@Table(name = "supplier")
 @Setter
 @Getter
 @NoArgsConstructor
-public class User {
+public class Supplier {
+
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long userId;
+    private Long supplierId;
+
+    @Column(name = "name")
+    private String name;
+
+    @Column(name = "tel_num")
+    private String address;
 
     @Column(name = "email")
     private String email;
 
-    @Column(name = "uname")
-    private String uName;
-
-    @Column(name = "password")
-    private String password;
-
-    @Column(name = "isactive")
-    private Boolean isActive;
-
-    @Column(name = "isblock")
-    private Boolean isBlock;
-
-
+    @Column(name = "is_owner")
+    private boolean isOwner;
 }

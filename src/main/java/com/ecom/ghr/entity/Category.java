@@ -16,29 +16,16 @@ import lombok.Setter;
  * @author ghr
  */
 @Entity
-@Table(name = "user")
+@Table(name = "category")
 @Setter
 @Getter
 @NoArgsConstructor
-public class User {
+public class Category {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    private Long userId;
+    private Long categoryId;
 
-    @Column(name = "email")
-    private String email;
-
-    @Column(name = "uname")
-    private String uName;
-
-    @Column(name = "password")
-    private String password;
-
-    @Column(name = "isactive")
-    private Boolean isActive;
-
-    @Column(name = "isblock")
-    private Boolean isBlock;
-
+    @Column(name = "categories")
+    private String categories;
 
 }
